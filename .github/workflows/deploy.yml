@@ -19,5 +19,5 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           # Configura o git para empurrar o código para o Space
-          git remote add space https://SEU_USUARIO:$HF_TOKEN@huggingface.co/spaces/SEU_USUARIO/classificador-fraude-ptbr
+          git remote add space https://ySolis:$HF_TOKEN@huggingface.co/spaces/ySolis/classificador-fraude-ptbr
           git push --force space main
