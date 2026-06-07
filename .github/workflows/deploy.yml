@@ -1,0 +1,23 @@
+name: Sync to Hugging Face Hub
+on:
+  push:
+    branches: [main]
+  # Permite rodar o deploy manualmente na aba Actions do GitHub
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      
+      - name: Push to Hugging Face Spaces
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          # Configura o git para empurrar o código para o Space
+          git remote add space https://SEU_USUARIO:$HF_TOKEN@huggingface.co/spaces/SEU_USUARIO/classificador-fraude-ptbr
+          git push --force space main

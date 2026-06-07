@@ -1,0 +1,17 @@
+# Ambientes virtuais
+venv/
+env/
+.env
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos do Codex/Agentes (opcional: se quiser manter as skills privadas)
+# .codex/
+# .agents/
+
+# Logs e datasets grandes
+*.log
+*.csv
