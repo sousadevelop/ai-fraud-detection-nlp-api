@@ -1,3 +1,12 @@
+---
+title: Classificador Fraude PT-BR
+emoji: 🕵️‍♂️
+colorFrom: blue
+colorTo: red
+sdk: docker
+pinned: false
+---
+
 # API de Classificacao de Fraudes em PT-BR
 
 ## 1. Introducao formal
